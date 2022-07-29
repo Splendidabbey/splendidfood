@@ -12,7 +12,7 @@
 
     <div class="recommended">
 
-      <ProductCardVue v-for="(product, index) in inventory.slice(0,3)" :key="product.id" :index="index" :product="product" :addToCart="addToCart"/>
+      <ProductCardVue v-for="(product, index) in inventory.slice(0,3)" :productIcon="product.icon" :key="product.id" :index="index" :product="product" :addToCart="addToCart"/>
 
     </div>
 

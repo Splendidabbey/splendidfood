@@ -2,7 +2,7 @@
   <main class="wrapper">
     <h1>Products</h1>
     <div class="card-container">
-      <ProductCardVue v-for="(product, index) in inventory.slice(0,6)" :key="product.id" :index="index" :product="product" :addToCart="addToCart"/>
+      <ProductCardVue v-for="(product, index) in inventory.slice(0,6)" :key="product.id" :productIcon="product.icon" :index="index" :product="product" :addToCart="addToCart" />
     </div>
   </main>
 </template>

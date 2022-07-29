@@ -4,7 +4,7 @@
             {{ product.name }}
         </div>
         <div class="card-body">
-            <i class="icofont-10x icofont-{{ product.icon }}"></i>
+            <i :class="[this.icon]" />
             <form>
             <div class="row">
                 <div class="cell">
@@ -43,10 +43,11 @@
 <script>
 
 export default {
-  props: ['product', 'index', 'addToCart'],
+  props: ['product', 'index', 'addToCart', 'productIcon'],
   data () {
     return {
-      quantity: 0
+      quantity: 0,
+      icon: 'icofont-10x icofont-' + this.productIcon
     }
   }
 }
